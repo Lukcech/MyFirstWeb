@@ -13,7 +13,7 @@ header {
     padding: 15px 0;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     border-bottom: 3px solid transparent;
-    transition: border-bottom 0.6s ease; /* Zpomalení přechodu */
+    transition: border-bottom 0.6s ease; 
 }
 
 .header-content {
@@ -33,31 +33,31 @@ nav {
     color: #fff;
     margin: 0 15px;
     padding: 5px;
-    transition: color 0.6s ease, box-shadow 0.6s ease; /* Zpomalení přechodu pro box-shadow a barvu */
+    transition: color 0.6s ease, box-shadow 0.6s ease; 
     position: relative;
 }
 
-/* Přidání jemného podržení pro hover efekt */
+
 .nav-link::before {
-    content: ''; /* Pseudoelement pro jemné podržení */
+    content: ''; 
     position: absolute;
     top: 100%;
     left: 0;
     width: 100%;
-    height: 2px; /* Výška podržení */
+    height: 2px; 
     background-color: transparent;
-    transition: background-color 0.6s ease; /* Zpomalení přechodu pro barvu podržení */
-    opacity: 0; /* Výchozí stav: neviditelné */
+    transition: background-color 0.6s ease; 
+    opacity: 0; 
 }
 
 .nav-link:hover {
     color: #007bff;
-    box-shadow: inset 0 -2px 0 #007bff; /* Jemné podržení na hover */
+    box-shadow: inset 0 -2px 0 #007bff;
 }
 
 .nav-link:hover::before {
-    background-color: #007bff; /* Barva podržení na hover */
-    opacity: 0.5; /* Podržení se objeví na hover s menší průhledností */
+    background-color: #007bff; 
+    opacity: 0.5; 
 }
 
 #intro {
@@ -80,7 +80,7 @@ nav {
     padding-top: 70px;
 }
 
-/* Styly pro nadpis v headeru */
+
 header h1 {
     font-size: 1.2em;
     color: white;
@@ -89,12 +89,12 @@ header h1 {
     align-items: center;
 }
 
-/* Posunutí názvu ještě blíže k profilové fotce */
+
 header h1 span {
     margin-right: 3px;
 }
 
-/* Přidání efektu přechodu na spodní hranu headeru */
+
 header:hover {
     border-bottom: 3px solid #007bff;
 }
@@ -177,7 +177,7 @@ header:hover {
     background-color: #0056b3;
 }
 
-/* Responsivní design */
+
 @media (max-width: 600px) {
     .contact-container {
         width: 90%;
