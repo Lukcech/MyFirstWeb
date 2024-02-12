@@ -1,0 +1,185 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #000;
+    color: #fff;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    padding: 15px 0;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-bottom: 3px solid transparent;
+    transition: border-bottom 0.6s ease; /* Zpomalení přechodu */
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+nav {
+    display: flex;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #fff;
+    margin: 0 15px;
+    padding: 5px;
+    transition: color 0.6s ease, box-shadow 0.6s ease; /* Zpomalení přechodu pro box-shadow a barvu */
+    position: relative;
+}
+
+/* Přidání jemného podržení pro hover efekt */
+.nav-link::before {
+    content: ''; /* Pseudoelement pro jemné podržení */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 2px; /* Výška podržení */
+    background-color: transparent;
+    transition: background-color 0.6s ease; /* Zpomalení přechodu pro barvu podržení */
+    opacity: 0; /* Výchozí stav: neviditelné */
+}
+
+.nav-link:hover {
+    color: #007bff;
+    box-shadow: inset 0 -2px 0 #007bff; /* Jemné podržení na hover */
+}
+
+.nav-link:hover::before {
+    background-color: #007bff; /* Barva podržení na hover */
+    opacity: 0.5; /* Podržení se objeví na hover s menší průhledností */
+}
+
+#intro {
+    text-align: center;
+}
+
+.profile-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 5px;
+    border: 2px solid #fff;
+}
+
+
+#intro img {
+    width: 100%;
+    height: auto;
+    margin: 20px auto;
+}
+
+/* Styly pro nadpis v headeru */
+header h1 {
+    font-size: 1.2em;
+    color: white;
+    font-weight: 300;
+    display: flex;
+    align-items: center;
+}
+
+/* Posunutí názvu ještě blíže k profilové fotce */
+header h1 span {
+    margin-right: 3px;
+}
+
+/* Přidání efektu přechodu na spodní hranu headeru */
+header:hover {
+    border-bottom: 3px solid #007bff;
+}
+
+.EN-img {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-right: 25px;
+    border: 2px solid #fff;
+}
+
+.language-buttons {
+    display: flex;
+    align-items: center;
+}
+
+.language-button {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: #fff;
+    color: #000;
+    margin-left: 10px;
+    cursor: pointer;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 14px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+.contact-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-heading {
+    text-align: center;
+    color: #333;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    padding-top: 100px;
+}
+
+.contact-label {
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.contact-input,
+.contact-textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.contact-button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsivní design */
+@media (max-width: 600px) {
+    .contact-container {
+        width: 90%;
+    }
+}
+
